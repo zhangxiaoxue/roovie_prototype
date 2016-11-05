@@ -1,0 +1,75 @@
+<div ng-controller="ChatRoomCtrl" class="main-chat-room">
+
+    <div class="page-nav page-sub-nav" style="background-image: url(assets/img/room/sub_nav.png)">
+        <div class="nav-left">
+            <a href="#/chat"></a>
+        </div>
+    </div>
+
+    <!--<div class="page-nav" id="page-nav" style="background-image: url(assets/img/chat/sub_nav.png)">
+        <h1>Breaking Bad</h1>
+    </div>-->
+
+    <div class="timeline">
+        <img src="assets/img/room/timeline.png" width="100%"/>
+    </div>
+
+    <div class="chat-room">
+        <!--<div class="split"><p>Pull down to view historical messages</p></div>-->
+        <ul class="chat-messages">
+            <li ng-repeat="msg in messages" class="clearfix">
+                <div class="msg-time">
+                    {{msg.time}}
+                </div>
+                <div class="msg-other" ng-if="msg.from != username">
+                    <div class="user-photo">
+                        <img src="assets/img/avatar/1.jpg" ng-if="msg.from == 'ellie@gmail.com'" alt="{{ msg.from }}"/>
+                        <img src="assets/img/avatar/2.jpg" ng-if="msg.from == 'tica@gmail.com'" alt="{{ msg.from }}"/>
+                        <img src="assets/img/avatar/3.jpg" ng-if="msg.from == 'max@gmail.com'" alt="{{ msg.from }}"/>
+                        <img src="assets/img/avatar/4.jpg" ng-if="msg.from == 'chester@gmail.com'" alt="{{ msg.from }}"/>
+                        <img src="assets/img/avatar/5.jpg" ng-if="msg.from == 'petro@gmail.com'" alt="{{ msg.from }}"/>
+                        <img src="assets/img/avatar/6.jpg" ng-if="msg.from != 'ellie@gmail.com' && msg.from != 'tica@gmail.com'
+                            && msg.from != 'max@gmail.com' && msg.from != 'chester@gmail.com' && msg.from != 'petro@gmail.com'" alt="{{ msg.from }}"/>
+                    </div>
+                    <div class="msg-body" ng-bind-html="msg.body | rawHtml">
+                    </div>
+                </div>
+                <div class="msg-owner" ng-if="msg.from == username">
+                    <div class="user-photo">
+                        <img src="assets/img/avatar/1.jpg" ng-if="msg.from == 'ellie@gmail.com'" alt="{{ msg.from }}"/>
+                        <img src="assets/img/avatar/2.jpg" ng-if="msg.from == 'tica@gmail.com'" alt="{{ msg.from }}"/>
+                        <img src="assets/img/avatar/3.jpg" ng-if="msg.from == 'max@gmail.com'" alt="{{ msg.from }}"/>
+                        <img src="assets/img/avatar/4.jpg" ng-if="msg.from == 'chester@gmail.com'" alt="{{ msg.from }}"/>
+                        <img src="assets/img/avatar/5.jpg" ng-if="msg.from == 'petro@gmail.com'" alt="{{ msg.from }}"/>
+                        <img src="assets/img/avatar/6.jpg" ng-if="msg.from != 'ellie@gmail.com' && msg.from != 'tica@gmail.com'
+                            && msg.from != 'max@gmail.com' && msg.from != 'chester@gmail.com' && msg.from != 'petro@gmail.com'" alt="{{ msg.from }}"/>
+                    </div>
+                    <div class="msg-body" ng-bind-html="msg.body | rawHtml">
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="page-sub-tab animated" id="page-sub-tab">
+        <div class="msg-create">
+            <input type="text" id="messageInput" ng-model="msg" placeholder="Type a message...">
+        </div>
+        <ul class="tab-list clearfix">
+            <li><a href="javascript:;"><i class="icon icon-voice"></i></a></li>
+            <li><a href="javascript:;" ng-click="toggleEmoji()"><i class="icon icon-emoji"></i></a></li>
+            <li><a href="javascript:;"><i class="icon icon-photo"></i></a></li>
+            <li><a href="javascript:;" ng-click="addShot()"><i class="icon icon-shot"></i></a></li>
+            <li><a href="javascript:;"><i class="icon icon-gif"></i></a></li>
+            <li><a href="javascript:;" ng-click="addMessage($event)"><i class="icon-paper-plane-alt btn-send"></i></a></li>
+        </ul>
+        <div emoji class="emoji" id="emoji">
+            <ul>
+                <li ng-repeat="emoji in emojis track by $index">
+                    <a href="javascript:;" class="emoji-item" data-id="{{emoji}}"><img src="assets/img/emoji/{{emoji}}.png"/></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>

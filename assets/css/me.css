@@ -1,0 +1,61 @@
+.main-me{
+    background-color: #fff;
+    padding-top: 44px;
+    padding-bottom: 49px;
+}
+.main-me .container{
+    padding: 0;
+}
+
+.main-me .container .component{
+    position: relative;
+}
+
+.main-me .container .component-last{
+    padding-bottom: 30px;
+}
+
+.main-me .link-history{
+    left: 16px;
+    top: 240px;
+    width: 100px;
+    height: 140px;
+}
+
+.main-history{
+    background-color: #fff;
+    padding-top: 44px;
+    padding-bottom: 49px;
+}
+.main-history .container{
+    padding: 0;
+}
+
+.main-history .container .component{
+    position: relative;
+}
+
+.main-history .container .component-last{
+    padding-bottom: 30px;
+}
+
+.main-history .link-chat-room{
+    left: 10px;
+    top: 226px;
+    width: 355px;
+    height: 44px;
+}
+
+.main-history .link-episode{
+    left: 98px;
+    top: 162px;
+    width: 100px;
+    height: 46px;
+}
+.main-history .link-history{
+    left: 0px;
+    top: 162px;
+    width: 100px;
+    height: 46px;
+}
+

@@ -1,0 +1,17 @@
+/*friend list*/
+.main-friend{
+    background-color: #fff;
+    padding-top: 44px;
+    padding-bottom: 49px;
+}
+.main-friend .container{
+}
+
+.main-friend .container .component{
+    margin-top: 20px;
+    position: relative;
+}
+
+.main-friend .container .component-last{
+    padding-bottom: 20px;
+}

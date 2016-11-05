@@ -1,0 +1,98 @@
+.main-signin{
+    position: relative;
+    z-index: 998;
+    height: 100%;
+    background-color: #fff;
+}
+
+.form-signin {
+    max-width: 94%;
+    padding: 5%;
+    margin: 10% auto 0;
+}
+
+.form-register{
+    margin: 5% auto 0;
+}
+
+.form-signin .form-control {
+    position: relative;
+    height: auto;
+    padding: 4%;
+    box-shadow: none;
+}
+.form-signin .form-control:focus {
+    box-shadow: none;
+}
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+}
+.form-signin input[type="email"], .form-signin input[type="password"]{
+    border-radius: 0;
+    border-color: transparent;
+    border-bottom: 1px solid #e5e5e5
+}
+.form-signin .btn{
+    width: 100%;
+    /* position: fixed; */
+    /* bottom: 10px; */
+    /* left: 10px; */
+    /* right: 10px; */
+    border-radius: 2px;
+    font-weight: lighter;
+}
+
+.cover {
+    position: relative;
+    text-align: center;
+    background: url(../img/bg.jpg) center no-repeat;
+    height: 280px;
+    background-size: 100%;
+}
+.cover h1{
+    font-weight: 300;
+    color: rgba(255,255,255, 1);
+    padding-top: 24%;
+    margin: 0;
+    font-size: 40px;
+    display: none;
+}
+.cover .signin-tabs{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-bottom: 0 none;
+}
+.cover .signin-tabs li{
+    width: 50%;
+    margin-bottom: 0;
+    float: left;
+}
+.cover .signin-tabs li a{
+    color: rgba(255,255,255,0.3);
+    background-color: transparent;
+    border: 0 none;
+    border-top:1px solid rgba(255,255,255, 0.3);
+    font-size: 12px;
+    border-radius: 0;
+    margin-right: 0;
+    padding: 15px;
+}
+.cover .signin-tabs .active a{
+    color: rgba(255,255,255,1);
+}
+
+.form-btn{
+    padding: 10px;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.login-tip{
+    text-align: center;
+    font-size: 14px;
+    padding-top: 20px;
+    color: #797979;
+}

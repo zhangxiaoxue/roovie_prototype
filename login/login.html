@@ -1,0 +1,30 @@
+<div ng-controller="LoginCtrl" class="main-signin">
+
+    <div class="cover">
+        <h1>Social TV</h1>
+        <ul class="nav signin-tabs">
+            <li role="presentation"><a href="#/register">SIGN UP</a></li>
+            <li role="presentation" class="active"><a href="#/login">SIGN IN</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <form class="form-signin" name="signinForm" role="form">
+            <div class="form-group">
+                <!--ng-class="{ 'has-error' : signinForm.email.$invalid }"-->
+                <input type="email" name="email" class="form-control" ng-model="user.email" placeholder="Email">
+                <!--<p class="help-block" ng-show="signinForm.email.$invalid">Enter a valid email.</p>-->
+            </div>
+            <div class="form-group">
+                <!-- ng-class="{ 'has-error' : signinForm.password.$invalid }"-->
+                <input type="password" name="password" class="form-control" ng-model="user.password" ng-minlength="4" placeholder="Password">
+                <!--<p class="help-block" ng-show="signinForm.password.$error.minlength">Min password length is 4 characters.</p>-->
+            </div>
+            <div class="form-btn">
+                <button type="button" ng-click="signIn($event)" class="btn btn-lg btn-primary btn-block">Sign In</button>
+            </div>
+
+            <p class="login-tip">Click "Sign In" to enter into Home page</p>
+        </form>
+    </div>
+
+</div>
