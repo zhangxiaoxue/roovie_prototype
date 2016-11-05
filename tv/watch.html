@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Breaking Bad</title>
+    <link rel="stylesheet" href="./assets/css/main.css"/>
+</head>
+<body>
+<div class="video-container">
+    <video width="1000" id="video" preload="auto" controls>
+        <source type="./video/mp4" src="assets/resouce/Breaking.Bad.S05E16.mp4" id="mp4"></source>
+        <!--<source type="video/mp4" src="assets/video/video.mp4" id="mp4"></source>-->
+        Your browser does not support the video tag.
+    </video>
+</div>
+<script src="https://cdn.firebase.com/js/client/2.3.1/firebase.js"></script>
+<script type="text/javascript">
+    var vid = document.getElementById("video");
+    var db = new Firebase('https://boiling-torch-6067.firebaseio.com/Time');
+    var id = 1;
+
+    function getCurTime() {
+        return vid.currentTime;
+    }
+
+    /*window.setInterval(function(){
+        var currentTime = vid.currentTime;
+
+        var time = {
+            id: id,
+            time: Math.round(currentTime)
+        };
+
+        db.set(time);
+    }, 1000);*/
+
+    vid.ontimeupdate = function() {
+        var currentTime = vid.currentTime;
+
+        /*var time = {
+            id: id,
+            time: Math.round(currentTime)
+        };*/
+        var time = {};
+        time[id] = Math.round(currentTime);
+
+        db.set(time);
+    };
+
+</script>
+</body>
+</html>
